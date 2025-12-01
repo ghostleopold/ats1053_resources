@@ -1,0 +1,6 @@
+Payoffs are 
+
+|        | Return | Steal |
+| ------ | ------ | ----- |
+| Invest | 20, 30 | 0, 10 |
+| Refuse | 30, 0  | 0, 30 |
