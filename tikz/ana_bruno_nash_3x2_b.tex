@@ -1,0 +1,21 @@
+% A3-alt (Ne31a) -- find all pure strategy Nash equilibria.
+% Equilibria: (Up, Right) and (Middle, Left).
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Bruno}
+  \collabel{0}{Left}
+  \collabel{1}{Right}
+  \rowplayer{3}{Ana}
+  \rowlabel{0}{Up}
+  \rowlabel{1}{Middle}
+  \rowlabel{2}{Down}
+  \pcell{0}{0}{1, 1}
+  \pcell{1}{0}{4, 3}
+  \pcell{0}{1}{5, 2}
+  \pcell{1}{1}{2, 1}
+  \pcell{0}{2}{2, 0}
+  \pcell{1}{2}{3, 2}
+\end{tikzpicture}
+\end{document}

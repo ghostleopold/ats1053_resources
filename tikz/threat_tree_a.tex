@@ -1,0 +1,20 @@
+% Practice test D5 (Cr42) -- Layla has a NON-CREDIBLE threat.
+%   At Layla's node, D pays 1 and U pays 0, so U would never be played.
+%   But U, if believed, would deter: Isaac gets 0 down R-then-U against 2
+%   for L. And Layla would like to deter, since L pays them 2 against the 1
+%   they actually collect. So the threat is worth making and worth ignoring.
+\documentclass[border=6pt]{standalone}
+\input{tree-style}
+\begin{document}
+\begin{tikzpicture}[gametree]
+  \dn{r}{0}{0}{Isaac}{above}
+  \lf{a}{-1.8}{-2.0}{2}{2}
+  \dn{n}{1.8}{-2.0}{Layla}{above right}
+  \lf{b}{0.5}{-4.0}{0}{0}
+  \lf{c}{3.1}{-4.0}{3}{1}
+  \mv{r}{a}{L}{above left}
+  \mv{r}{n}{R}{above right}
+  \mv{n}{b}{U}{above left}
+  \mv{n}{c}{D}{above right}
+\end{tikzpicture}
+\end{document}

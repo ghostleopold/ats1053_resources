@@ -1,0 +1,20 @@
+% B2-alt (Pd61a) -- fill in the missing payoff to make it a Prisoner's Dilemma.
+% Only Frida's (the row player's) payoffs are shown, and this time the missing
+% cell is mutual cooperation. T=60 > R=? > P=30 > S=20, so the answer is 45.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Gus}
+  \collabel{0}{C}
+  \collabel{1}{D}
+  \rowplayer{2}{Frida}
+  \rowlabel{0}{C}
+  \rowlabel{1}{D}
+  \pcell{0}{0}{?}
+  \pcell{1}{0}{20}
+  \pcell{0}{1}{60}
+  \pcell{1}{1}{30}
+  \gridnote{2}{2}{Each cell shows Frida's payoff only.}
+\end{tikzpicture}
+\end{document}

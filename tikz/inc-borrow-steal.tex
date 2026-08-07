@@ -1,0 +1,22 @@
+% ---------------------------------------------------------------------------
+% Node skeleton for the Borrow/Steal tree -- the one used by Pt10, Pt10a,
+% Pt11 and Pt12. Nodes and payoffs only: each figure draws its own branches,
+% bolding whichever of them it needs.
+%
+%                      A
+%             Borrow       Steal
+%           B                    B
+%     Beg     Bargain      Yell     Cry
+%    (2,0)     (1,0)      (2,3)    (3,2)
+%
+% \input this inside a {tikzpicture}[gametree]. Node names: r, bl, br for the
+% decision nodes; beg, bar, yel, cry for the leaves.
+% ---------------------------------------------------------------------------
+  \dn{r}{0}{0}{A}{above}
+  \dn{bl}{-2.4}{-1.9}{B}{above left}
+  \dn{br}{2.4}{-1.9}{B}{above right}
+  \lf{beg}{-3.6}{-3.8}{2}{0}
+  \lf{bar}{-1.2}{-3.8}{1}{0}
+  \lf{yel}{1.2}{-3.8}{2}{3}
+  \lf{cry}{3.6}{-3.8}{3}{2}
+  \plegend{beg}{A}{B}

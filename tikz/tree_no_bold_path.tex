@@ -1,0 +1,15 @@
+% Pt11 / Pt12 -- the Borrow/Steal tree with nothing picked out. Students are
+% asked which pairs of moves count as a strategy for B.
+\documentclass[border=6pt]{standalone}
+\input{tree-style}
+\begin{document}
+\begin{tikzpicture}[gametree]
+  \input{inc-borrow-steal}
+  \mv{r}{bl}{Borrow}{above left}
+  \mv{r}{br}{Steal}{above right}
+  \mv{bl}{beg}{Beg}{above left}
+  \mv{bl}{bar}{Bargain}{above right}
+  \mv{br}{yel}{Yell}{above left}
+  \mv{br}{cry}{Cry}{above right}
+\end{tikzpicture}
+\end{document}

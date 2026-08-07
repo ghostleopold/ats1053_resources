@@ -1,0 +1,17 @@
+% A1-alt (Bc31a) -- best response, unique answer. Ana's BR to Y is Down.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Bruno}
+  \collabel{0}{X}
+  \collabel{1}{Y}
+  \rowplayer{2}{Ana}
+  \rowlabel{0}{Up}
+  \rowlabel{1}{Down}
+  \pcell{0}{0}{2, 3}
+  \pcell{1}{0}{1, 2}
+  \pcell{0}{1}{1, 1}
+  \pcell{1}{1}{4, 0}
+\end{tikzpicture}
+\end{document}

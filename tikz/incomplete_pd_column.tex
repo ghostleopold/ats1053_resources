@@ -1,0 +1,19 @@
+% B2 (Pd61) -- fill in the missing payoff to make it a Prisoner's Dilemma.
+% Only Gus's (the column player's) payoffs are shown. Answer: 35.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Gus}
+  \collabel{0}{C}
+  \collabel{1}{D}
+  \rowplayer{2}{Frida}
+  \rowlabel{0}{C}
+  \rowlabel{1}{D}
+  \pcell{0}{0}{40}
+  \pcell{1}{0}{45}
+  \pcell{0}{1}{30}
+  \pcell{1}{1}{?}
+  \gridnote{2}{2}{Each cell shows Gus's payoff only.}
+\end{tikzpicture}
+\end{document}

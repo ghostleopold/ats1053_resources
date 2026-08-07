@@ -1,0 +1,48 @@
+% ---------------------------------------------------------------------------
+% Shared style for ATS1053 payoff-matrix figures.
+%
+% Matches the look of the older hand-made tables (sans-serif text, mid-grey
+% grid lines, bold player names sitting outside the frame).
+%
+% Cells are addressed by integer coordinates because each picture sets
+% x = one cell width and y = minus one cell height. So cell (col,row) runs
+% from (col,row) to (col+1,row+1), with row 0 at the top.
+% ---------------------------------------------------------------------------
+
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz}
+
+\definecolor{gridgrey}{gray}{0.45}
+
+\newcommand{\pmfont}{\fontsize{12}{14}\selectfont}
+\newcommand{\pmnotefont}{\fontsize{9.5}{11.5}\selectfont}
+
+\tikzset{
+  payoffgrid/.style={x=2.55cm, y=-1.45cm, font=\pmfont},
+  cellborder/.style={draw=gridgrey, line width=0.7pt},
+}
+
+% \pcell{col}{row}{payoffs}  -- one cell of the grid, with its contents
+\newcommand{\pcell}[3]{%
+  \draw[cellborder] (#1,#2) rectangle (#1+1,#2+1);%
+  \node at (#1+0.5,#2+0.5) {#3};%
+}
+
+% \collabel{col}{text}  -- move label above a column
+\newcommand{\collabel}[2]{\node at (#1+0.5,-0.34) {#2};}
+
+% \rowlabel{row}{text}  -- move label to the left of a row
+\newcommand{\rowlabel}[2]{\node[anchor=east] at (-0.14,#1+0.5) {#2};}
+
+% \colplayer{ncols}{name}  -- bold player name centred above the columns
+\newcommand{\colplayer}[2]{\node[font=\bfseries\pmfont] at (#1/2,-0.92) {#2};}
+
+% \rowplayer{nrows}{name}  -- bold player name to the left of the row labels
+\newcommand{\rowplayer}[2]{\node[anchor=east,font=\bfseries\pmfont] at (-1.02,#1/2) {#2};}
+
+% \gridnote{ncols}{nrows}{text}  -- small italic note under the grid
+\newcommand{\gridnote}[3]{%
+  \node[anchor=north,font=\itshape\pmnotefont] at (#1/2,#2+0.22) {#3};%
+}

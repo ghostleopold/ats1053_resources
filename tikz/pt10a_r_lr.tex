@@ -1,0 +1,15 @@
+% Pt10a option (d) -- the profile (Steal, (Beg, Cry)). Full profile, still not
+% an equilibrium: after Steal, B takes 2 by Crying when Yelling pays 3.
+\documentclass[border=6pt]{standalone}
+\input{tree-style}
+\begin{document}
+\begin{tikzpicture}[gametree]
+  \input{inc-borrow-steal}
+  \mv{r}{bl}{Borrow}{above left}
+  \mvb{r}{br}{Steal}{above right}
+  \mvb{bl}{beg}{Beg}{above left}
+  \mv{bl}{bar}{Bargain}{above right}
+  \mv{br}{yel}{Yell}{above left}
+  \mvb{br}{cry}{Cry}{above right}
+\end{tikzpicture}
+\end{document}

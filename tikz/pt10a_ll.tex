@@ -1,0 +1,15 @@
+% Pt10a option (a) -- Borrow then Beg. Again only a path of play: B's move
+% after Steal is unspecified, so there is no strategy profile to assess.
+\documentclass[border=6pt]{standalone}
+\input{tree-style}
+\begin{document}
+\begin{tikzpicture}[gametree]
+  \input{inc-borrow-steal}
+  \mvb{r}{bl}{Borrow}{above left}
+  \mv{r}{br}{Steal}{above right}
+  \mvb{bl}{beg}{Beg}{above left}
+  \mv{bl}{bar}{Bargain}{above right}
+  \mv{br}{yel}{Yell}{above left}
+  \mv{br}{cry}{Cry}{above right}
+\end{tikzpicture}
+\end{document}

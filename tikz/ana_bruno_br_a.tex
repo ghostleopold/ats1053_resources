@@ -1,0 +1,17 @@
+% A1 (Bc31) -- best response, unique answer. Ana's BR to X is Up.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Bruno}
+  \collabel{0}{X}
+  \collabel{1}{Y}
+  \rowplayer{2}{Ana}
+  \rowlabel{0}{Up}
+  \rowlabel{1}{Down}
+  \pcell{0}{0}{3, 1}
+  \pcell{1}{0}{0, 0}
+  \pcell{0}{1}{2, 2}
+  \pcell{1}{1}{4, 1}
+\end{tikzpicture}
+\end{document}

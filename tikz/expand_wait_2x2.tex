@@ -1,0 +1,19 @@
+% B5-alt (Eq31a) -- identify the classic game from the matrix.
+% T=150 > R=120 > S=90 > P=60, so it is Chicken (snowdrift). Filename deliberately
+% neutral so that a student inspecting the image URL learns nothing.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Column player}
+  \collabel{0}{Expand}
+  \collabel{1}{Wait}
+  \rowplayer{2}{Row player}
+  \rowlabel{0}{Expand}
+  \rowlabel{1}{Wait}
+  \pcell{0}{0}{60, 60}
+  \pcell{1}{0}{150, 90}
+  \pcell{0}{1}{90, 150}
+  \pcell{1}{1}{120, 120}
+\end{tikzpicture}
+\end{document}

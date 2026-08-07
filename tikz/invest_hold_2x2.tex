@@ -1,0 +1,19 @@
+% B5 (Eq31) -- identify the classic game from the matrix.
+% R=140 > T=130 > P=120 > S=100, so it is a Stag Hunt. Filename deliberately neutral
+% so that a student inspecting the image URL learns nothing.
+\documentclass[border=6pt]{standalone}
+\input{matrix-style}
+\begin{document}
+\begin{tikzpicture}[payoffgrid]
+  \colplayer{2}{Column player}
+  \collabel{0}{Invest}
+  \collabel{1}{Hold}
+  \rowplayer{2}{Row player}
+  \rowlabel{0}{Invest}
+  \rowlabel{1}{Hold}
+  \pcell{0}{0}{140, 140}
+  \pcell{1}{0}{100, 130}
+  \pcell{0}{1}{130, 100}
+  \pcell{1}{1}{120, 120}
+\end{tikzpicture}
+\end{document}

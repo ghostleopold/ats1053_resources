@@ -1,0 +1,16 @@
+% Pt10 -- Borrow then Bargain picked out. The point of the question is that
+% this is a path of play and not a strategy profile: nothing here says what B
+% would have done after Steal.
+\documentclass[border=6pt]{standalone}
+\input{tree-style}
+\begin{document}
+\begin{tikzpicture}[gametree]
+  \input{inc-borrow-steal}
+  \mvb{r}{bl}{Borrow}{above left}
+  \mv{r}{br}{Steal}{above right}
+  \mv{bl}{beg}{Beg}{above left}
+  \mvb{bl}{bar}{Bargain}{above right}
+  \mv{br}{yel}{Yell}{above left}
+  \mv{br}{cry}{Cry}{above right}
+\end{tikzpicture}
+\end{document}
